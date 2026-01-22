@@ -3,11 +3,16 @@ name: Deploy React to Pages
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -22,8 +27,8 @@ jobs:
           node-version: 20
 
       - name: Install and Build
-        working-directory: ./fraud-detection-frontend
         run: |
+          cd fraud-detection-frontend
           npm install
           npm run build
 
@@ -33,7 +38,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './fraud-detection-frontend/dist' 
+  
+          path: './fraud-detection-frontend/dist'
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
