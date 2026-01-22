@@ -1,9 +1,12 @@
 export const en = {
-  title: "Document Fraud Detection",
-  statusFraud: "FRAUD SUSPECTED",
-  toggleAnomalies: "Show Anomalies",
-  toggleOCR: "Show OCR Overlay",
-  markFraud: "Mark as Fraud",
-  resetStatus: "Reset Status",
-  anomalyFound: "Anomaly detected"
+  ui: {
+    title: "Document Inspection",
+    fraudAlert: "FRAUD SUSPECTED",
+    showAnomalies: "Show Anomalies",
+    hideAnomalies: "Hide Anomalies",
+    showOCR: "Show OCR Text",
+    markAsFraud: "Mark as Fraud",
+    clearStatus: "Reset Status",
+    details: "Anomaly Details"
+  }
 };

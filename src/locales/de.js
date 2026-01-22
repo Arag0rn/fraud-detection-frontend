@@ -1,9 +1,12 @@
 export const de = {
-  title: "Betrugserkennung Software",
-  statusFraud: "BETRUGSVERDACHT",
-  toggleAnomalies: "Auffälligkeiten anzeigen",
-  toggleOCR: "OCR-Overlay einblenden",
-  markFraud: "Als Betrug markieren",
-  resetStatus: "Status zurücksetzen",
-  anomalyFound: "Auffälligkeit erkannt"
+  ui: {
+    title: "Dokumentenprüfung",
+    fraudAlert: "BETRUGSVERDACHT",
+    showAnomalies: "Auffälligkeiten anzeigen",
+    hideAnomalies: "Auffälligkeiten ausblenden",
+    showOCR: "OCR-Text anzeigen",
+    markAsFraud: "Als Betrug markieren",
+    clearStatus: "Status zurücksetzen",
+    details: "Details zur Auffälligkeit"
+  }
 };

@@ -1,0 +1,104 @@
+/* src/App.css */
+:root {
+  --primary-red: #ff4d4f;
+  --bg-color: #f0f2f5;
+}
+
+.app-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: var(--bg-color);
+  transition: background 0.3s ease;
+}
+
+.app-container.fraud-mode {
+  background: #fff1f0;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #001529;
+  color: white;
+}
+
+.main-layout {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.viewer-section {
+  flex: 3;
+}
+
+.controls-section {
+  flex: 1;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button-group, .fraud-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  background: white;
+  border-radius: 4px;
+}
+
+button.active {
+  background: #1890ff;
+  color: white;
+}
+
+.fraud-btn.active {
+  background: var(--primary-red);
+  color: white;
+  border-color: var(--primary-red);
+}
+
+.alert-badge {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--primary-red);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.fraud-banner {
+  background-color: #ff4d4f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
