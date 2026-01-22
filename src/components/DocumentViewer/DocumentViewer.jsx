@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './DocumentViewer.module.css';
 
 const DocumentViewer = ({ data, showAnomalies, showOCR, isFraud, currentLang }) => {
+  const fullImageUrl = `${import.meta.env.BASE_URL}${data.imageUrl}`;
   return (
     <div className={`${styles.container} ${isFraud ? styles.fraudBorder : ''}`}>
       <div className={styles.imageWrapper}>
-        <img src={data.imageUrl} alt="Document Scan" className={styles.documentImage} />
+        <img src={fullImageUrl} alt="Document Scan" className={styles.documentImage} />
 
         {showAnomalies && data.anomalies.map((anomaly) => {
           const info = anomaly.translations[currentLang] || anomaly.translations['en'];

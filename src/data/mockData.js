@@ -1,5 +1,5 @@
 export const documentData = {
-  imageUrl: "/excel-invoice-template.png",
+  imageUrl: "excel-invoice-template.png",
   anomalies: [
     {
       id: 1,

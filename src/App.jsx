@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { de } from './locales/de';
 import { en } from './locales/en';
-import { Sidebar } from './components/Sidebar.jsx';
+import { Sidebar } from './components/Sidebar/Sidebar.jsx';
 import { documentData } from './data/mockData';
 import DocumentViewer from './components/DocumentViewer/DocumentViewer.jsx';
 import './App.css';
