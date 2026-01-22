@@ -10,10 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -28,7 +24,6 @@ jobs:
 
       - name: Install and Build
         run: |
-          cd fraud-detection-frontend
           npm install
           npm run build
 
@@ -38,9 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-  
-          path: './fraud-detection-frontend/dist'
+          path: './dist' 
 
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: Deploy
         uses: actions/deploy-pages@v4
